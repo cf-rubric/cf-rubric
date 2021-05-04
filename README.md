@@ -45,9 +45,9 @@ Learning is the primary objective! Let’s have fun supporting each other as we 
 
 ### Entity Relationship Diagram
 
-![ERD](assets/class diagram.png)
+![ERD](assets/class-diagram.png)
 created using Umbrello.
 
 ### Object Domain Model
 
-![ODM](#)
+![ODM](assets/domain-model.png)
