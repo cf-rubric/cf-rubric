@@ -42,3 +42,12 @@ Dev branch is where we can break things
 Never work on the same feature as another team member. This will help us avoid merge conflicts
 Anything Else:
 Learning is the primary objective! Let’s have fun supporting each other as we move towards greater understanding and more coding competency :)
+
+### Entity Relationship Diagram
+
+![ERD](assets/class diagram.png)
+created using Umbrello.
+
+### Object Domain Model
+
+![ODM](#)
