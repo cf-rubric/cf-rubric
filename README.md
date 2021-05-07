@@ -1,6 +1,7 @@
 # Team Snek - Ben Hill, Alan Karlo Mangubat, Mason Fryberger, and Matthew Holder
 
-# Description
+## Description
+
 Full-stack Django Application with React front-end; Designed for Code Fellows to allow staff to easily track, grade and schedule final whiteboard exams. Uses API calls to canvas to populate student lists and OAUTH with slack to allow staff log-ins. Automates the grading process.
 
 Below is a copy of the team agreement detailing, communication plan, workflow, git-flow, and conflict resolution.
@@ -51,3 +52,4 @@ created using Umbrello.
 ### Object Domain Model
 
 ![ODM](assets/domain-model.png)
+created using Umbrello.
