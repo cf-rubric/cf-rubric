@@ -1,6 +1,10 @@
 # Team Snek - Ben Hill, Alan Karlo Mangubat, Mason Fryberger, and Matthew Holder
 
-Bellow is a copy of the team agreement detailing, communication plan, workflow, git-flow, and conflict resolution.
+## Description
+
+Full-stack Django Application with React front-end; Designed for Code Fellows to allow staff to easily track, grade and schedule final whiteboard exams. Uses API calls to canvas to populate student lists and OAUTH with slack to allow staff log-ins. Automates the grading process.
+
+Below is a copy of the team agreement detailing, communication plan, workflow, git-flow, and conflict resolution.
 
 ## Communication Plan
 
@@ -39,3 +43,13 @@ Dev branch is where we can break things
 Never work on the same feature as another team member. This will help us avoid merge conflicts
 Anything Else:
 Learning is the primary objective! Let’s have fun supporting each other as we move towards greater understanding and more coding competency :)
+
+### Entity Relationship Diagram
+
+![ERD](assets/class-diagram.png)
+created using Umbrello.
+
+### Object Domain Model
+
+![ODM](assets/domain-model.png)
+created using Umbrello.
