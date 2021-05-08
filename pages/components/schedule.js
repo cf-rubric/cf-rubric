@@ -10,14 +10,24 @@ export default function Schedule (props){
     const formHandler = (event) => {
         event.preventDefault();
 
+        alert(event.target.student.value)
         alert(event.target.date.value)
+        alert(event.target.whiteboard.value)
+
         const formData = new FormData(event.target)
     }
 
     return (
-        <div className="mx-20 border bg-green-400">
-            <form name="formData" onSubmit={formHandler}>
-            <Link href="/">Home</Link>
+        <div>
+            <Link href="/" className="text-xl">Home</Link>
+            <form name="formData" onSubmit={formHandler} className="mx-20 border-black bg-green-400">
+            <br />
+            <br />
+
+            <p>Student</p>
+            <input name="student" className="border-2 bg-green-400">
+
+            </input>
             <br />
             <br />
             <p>Select Date and Time</p>
@@ -34,9 +44,9 @@ export default function Schedule (props){
             />
             <br />
             <br />
+            <p>Select Whiteboard Challenge</p>
             <input name="whiteboard" className="border-2 bg-green-400">
 
-            <p>Select Whiteboard Challenge</p>
             </input>
             <br />
             <br />
