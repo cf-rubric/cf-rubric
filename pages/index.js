@@ -5,39 +5,41 @@ import { useState } from 'react'
 import { getToken } from '../services/data-fetcher.js'
 
 
+
 export default function Home() {
 
   // State variables go here
 
-  const [token, setToken] = useState();
+  // const [token, setToken] = useState();
 
-  // Handlers go here or in '../services/data-fetcher.js'
+  // // Handlers go here or in '../services/data-fetcher.js'
 
-  function loginHandler(){
-    data = getToken();
-    setToken(data.token);
-  }
+  // function loginHandler(){
+  //   data = getToken();
+  //   setToken(data.token);
+  // }
 
-  function logoutHandler(){
-    url = `https://slack.com/api/auth.revoke?token=${ token }`;
-    axios.post(url);
-    setToken(null);
-  }
+  // function logoutHandler(){
+  //   url = `https://slack.com/api/auth.revoke?token=${ token }`;
+  //   axios.post(url);
+  //   setToken(null);
+  // }
 
-  if (!token) {
-    return (
-      <div className="">
-        <LoginPage loginHandler={ loginHandler } />
-      </div>
-    )
-  } else {
+  // if (!token) {
+  //   return (
+  //     <div className="">
+  //       <LoginPage loginHandler={ loginHandler } />
+  //     </div>
+  //   )
+  // } else {
     return (
       <div className="">
         <Head>
           <title>Code Fellows Rubric</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header logoutHandler={ logoutHandler } />
+        {/* <Header logoutHandler={ logoutHandler } /> */}
+        <Header />
         <main className="">
           
         </main>
@@ -47,7 +49,7 @@ export default function Home() {
         </footer>
       </div>
     )
-  }
+  // }
 
   function Header(props){
     return(

@@ -4,34 +4,36 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function Schedule (props){
-    // const [date, setDate] = useState(new Date())
     const [selectedDate, setSelectedDate] = useState(null);
+    const [schedule, setSchedule] = useState("")
 
     const formHandler = (event) => {
         event.preventDefault();
 
-        alert(event.target.student.value)
-        alert(event.target.date.value)
-        alert(event.target.whiteboard.value)
+        // alert(event.target.student.value)
+        // alert(event.target.date.value)
+        // alert(event.target.whiteboard.value)
 
         const formData = new FormData(event.target)
+        const schedule = JSON.stringify(Object.fromEntries(formData))
+        setSchedule(schedule)
     }
 
     return (
         <div>
             <Link href="/" className="text-xl">Home</Link>
-            <form name="formData" onSubmit={formHandler} className="mx-20 border-black bg-green-400">
+            <form name="formData" onSubmit={formHandler} className="mx-20 bg-green-400 border-black">
             <br />
             <br />
 
-            <p>Student</p>
-            <input name="student" className="border-2 bg-green-400">
+            <h1>Student</h1>
+            <input name="student" className="bg-green-400 border-2" />
 
-            </input>
+
             <br />
             <br />
             <p>Select Date and Time</p>
-            <DatePicker name="date" className="border-2 bg-green-400"
+            <DatePicker name="date" className="bg-green-400 border-2"
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
                 showTimeSelect
@@ -45,13 +47,15 @@ export default function Schedule (props){
             <br />
             <br />
             <p>Select Whiteboard Challenge</p>
-            <input name="whiteboard" className="border-2 bg-green-400">
+            <input name="whiteboard" className="bg-green-400 border-2">
 
             </input>
             <br />
             <br />
             <button className="px-20 py-3 m-2 bg-blue-500">Submit</button>
             </form>
+
+            <p className="p-10 text-center">{schedule}</p>
         </div>
     )
 }
