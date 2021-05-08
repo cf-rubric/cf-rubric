@@ -1,3 +1,4 @@
+import Schedule from './components/schedule.js';
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -24,7 +25,9 @@ export default function Home() {
     <header className="">
       <nav>
         <h1>Code Fellows Rubric</h1>
-        <Link href="/schedule">Schedule Student</Link>
+        {/* Make sure when adding an href to keep the same format as below */}
+        <Link href="/components/schedule">Schedule Student</Link>
+        <Link href="/student">Student</Link>
       </nav>
     </header>
     )
