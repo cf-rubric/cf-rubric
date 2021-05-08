@@ -1,3 +1,4 @@
+import Schedule from './components/schedule.js';
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -50,12 +51,14 @@ export default function Home() {
 
   function Header(props){
     return(
-      <header className="">
-        <nav>
-          <h1>Code Fellows Rubric</h1>
-          <Link href="/schedule">Schedule Student</Link>
-        </nav>
-      </header>
+    <header className="bg-gray-500">
+      <nav>
+        <h1 className="text-xl">Code Fellows Rubric</h1>
+        {/* Make sure when adding an href to keep the same format as below */}
+        <Link href="/components/schedule">Schedule Student</Link>
+        <Link href="/student">Student</Link>
+      </nav>
+    </header>
     )
   }
 }
