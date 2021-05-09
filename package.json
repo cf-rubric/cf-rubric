@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "axios-hooks": "^2.6.1",
     "chalk": "^4.1.1",
     "cors": "^2.8.5",
     "dotenv": "^9.0.0",

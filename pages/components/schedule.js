@@ -2,8 +2,9 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+import faker from 'faker';
 
-export default function Schedule (props){
+export default function Schedule (){
     const [selectedDate, setSelectedDate] = useState(null);
     const [schedule, setSchedule] = useState("")
 

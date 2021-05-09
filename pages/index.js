@@ -1,13 +1,28 @@
-import Schedule from './components/schedule.js';
+import axios from 'axios'
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getToken } from '../services/data-fetcher.js'
 
 
 
 export default function Home() {
+  const [fakerData, setFakerData] = useState(null)
 
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch('/api/fakeData', {
+        method: 'POST',
+        body: JSON.stringify({
+          limit: 5,
+        }),
+      })
+      return response.json()
+    }
+    getData().then((fakerData) => {
+      setFakerData(fakerData)
+    })
+  }, [])
   // State variables go here
 
   // const [token, setToken] = useState();
@@ -41,7 +56,8 @@ export default function Home() {
         {/* <Header logoutHandler={ logoutHandler } /> */}
         <Header />
         <main className="">
-          
+          <h1>Hello, World!</h1>
+          {!fakerData ? '...loading' : <pre>{JSON.stringify(fakerData, null, 2)}</pre>}
         </main>
 
         <footer className="">
