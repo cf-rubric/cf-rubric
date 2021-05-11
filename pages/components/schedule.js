@@ -2,6 +2,8 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 export default function Schedule (props){
     // const [date, setDate] = useState(new Date())
@@ -19,19 +21,18 @@ export default function Schedule (props){
 
     return (
         <div>
-            <Link href="/" className="text-xl">Home</Link>
-            <form name="formData" onSubmit={formHandler} className="mx-20 border-black bg-green-400">
-            <br />
-            <br />
+            <Header/>
+            <h1 className="p-4 text-4xl text-center">Schedule Student</h1>
+            <form name="formData" onSubmit={formHandler} className="p-20 mb-5 border-4 border-gray-500 mx-96">
 
             <p>Student</p>
-            <input name="student" className="border-2 bg-green-400">
+            <input name="student" className="border-2 ">
 
             </input>
             <br />
             <br />
             <p>Select Date and Time</p>
-            <DatePicker name="date" className="border-2 bg-green-400"
+            <DatePicker name="date" className="border-2 "
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
                 showTimeSelect
@@ -45,13 +46,14 @@ export default function Schedule (props){
             <br />
             <br />
             <p>Select Whiteboard Challenge</p>
-            <input name="whiteboard" className="border-2 bg-green-400">
+            <input name="whiteboard" className="border-2 ">
 
             </input>
             <br />
             <br />
-            <button className="px-20 py-3 m-2 bg-blue-500">Submit</button>
+            <button className="px-20 py-3 m-2 transition bg-red-500 hover:bg-red-400">Submit</button>
             </form>
+            <Footer/>
         </div>
     )
 }
