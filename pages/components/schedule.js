@@ -2,7 +2,12 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+
 import faker from 'faker';
+
+import Header from '../components/header'
+import Footer from '../components/footer'
+
 
 export default function Schedule (){
     const [selectedDate, setSelectedDate] = useState(null);
@@ -22,19 +27,17 @@ export default function Schedule (){
 
     return (
         <div>
-            <Link href="/" className="text-xl">Home</Link>
-            <form name="formData" onSubmit={formHandler} className="mx-20 bg-green-400 border-black">
-            <br />
-            <br />
+            <Header/>
+            <h1 className="p-4 text-4xl text-center">Schedule Student</h1>
+            <form name="formData" onSubmit={formHandler} className="p-20 mb-5 border-4 border-gray-500 mx-96">
 
-            <h1>Student</h1>
-            <input name="student" className="bg-green-400 border-2" />
-
+            <p>Student</p>
+            <input name="student" className="border-2 ">
 
             <br />
             <br />
             <p>Select Date and Time</p>
-            <DatePicker name="date" className="bg-green-400 border-2"
+            <DatePicker name="date" className="border-2 "
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
                 showTimeSelect
@@ -48,15 +51,15 @@ export default function Schedule (){
             <br />
             <br />
             <p>Select Whiteboard Challenge</p>
-            <input name="whiteboard" className="bg-green-400 border-2">
+            <input name="whiteboard" className="border-2 ">
 
             </input>
             <br />
             <br />
-            <button className="px-20 py-3 m-2 bg-blue-500">Submit</button>
+            <button className="px-20 py-3 m-2 transition bg-red-500 hover:bg-red-400">Submit</button>
             </form>
 
-            <p className="p-10 text-center">{schedule}</p>
+            <Footer/>
         </div>
     )
 }
