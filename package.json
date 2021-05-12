@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwindcss",
+  "name": "cf-rubric",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
+    "@types/react": "^17.0.5",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.14",
     "tailwindcss": "^2.1.2",

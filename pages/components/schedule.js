@@ -2,21 +2,27 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+
+import faker from 'faker';
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-export default function Schedule (props){
-    // const [date, setDate] = useState(new Date())
+
+export default function Schedule (){
     const [selectedDate, setSelectedDate] = useState(null);
+    const [schedule, setSchedule] = useState("")
 
     const formHandler = (event) => {
         event.preventDefault();
 
-        alert(event.target.student.value)
-        alert(event.target.date.value)
-        alert(event.target.whiteboard.value)
+        // alert(event.target.student.value)
+        // alert(event.target.date.value)
+        // alert(event.target.whiteboard.value)
 
         const formData = new FormData(event.target)
+        const schedule = JSON.stringify(Object.fromEntries(formData))
+        setSchedule(schedule)
     }
 
     return (
@@ -28,7 +34,6 @@ export default function Schedule (props){
             <p>Student</p>
             <input name="student" className="border-2 ">
 
-            </input>
             <br />
             <br />
             <p>Select Date and Time</p>
@@ -53,6 +58,7 @@ export default function Schedule (props){
             <br />
             <button className="px-20 py-3 m-2 transition bg-red-500 hover:bg-red-400">Submit</button>
             </form>
+
             <Footer/>
         </div>
     )
