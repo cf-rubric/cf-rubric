@@ -6,8 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function Schedule (){
     const [selectedDate, setSelectedDate] = useState(null);
 
-    const randomName = faker.name.findName();
-
     return (
         <div>
             <Link href="/">Home</Link>
