@@ -1,5 +1,3 @@
-import faker from 'faker';
-
 // Next.js treats any file within pages as an API endpoint
 // your route, then, would be localhost:3000/api/fakeData
 
