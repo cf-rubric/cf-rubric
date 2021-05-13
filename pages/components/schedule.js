@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 
-import faker from 'faker';
-
 import Header from '../components/header'
 import Footer from '../components/footer'
 
@@ -32,8 +30,8 @@ export default function Schedule (){
             <form name="formData" onSubmit={formHandler} className="p-20 mb-5 border-4 border-gray-500 mx-96">
 
             <p>Student</p>
-            <input name="student" className="border-2 ">
-
+            <input name="student" className="border-2 " />
+            
             <br />
             <br />
             <p>Select Date and Time</p>
