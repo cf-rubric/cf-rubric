@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
-
 import Header from '../components/header'
 import Footer from '../components/footer'
 
@@ -25,7 +24,6 @@ export default function Schedule (){
 
     return (
         <div>
-            <Header/>
             <h1 className="p-4 text-4xl text-center">Schedule Student</h1>
             <form name="formData" onSubmit={formHandler} className="p-20 mb-5 border-4 border-gray-500 mx-96">
 

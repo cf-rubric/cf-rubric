@@ -2,8 +2,9 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+import Header from './header'
 
-export default function Schedule (){
+export default function Student (){
     const [selectedDate, setSelectedDate] = useState(null);
 
     return (

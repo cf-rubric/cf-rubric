@@ -9,17 +9,17 @@ export default function Header(props){
                 <nav className="inline-block text-2xl text-white ">
                     {/* Make sure when adding an href to keep the same format as below */}
         
-                    <Link href="/">
+                    <button onClick={ () => props.changeView('home') }>
                         <div className="inline-block p-8 transition bg-black hover:bg-gray-700">Overview</div>
-                    </Link>
+                    </button>
                     
-                    <Link href="/components/schedule">
+                    <button onClick={ () => props.changeView('schedule') }>
                         <div className="inline-block p-8 transition bg-black hover:bg-gray-700">Schedule Student</div>
-                    </Link>
+                    </button>
 
-                    <Link href="/mySchedule">
+                    <button onClick={ () => props.changeView('mySchedule') }>
                         <div className="inline-block p-8 transition bg-black hover:bg-gray-700">My Schedule</div>
-                    </Link>
+                    </button>
    
                 </nav>
             </div>
