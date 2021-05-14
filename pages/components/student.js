@@ -3,12 +3,8 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 
-const faker = require('faker');
-
 export default function Schedule (){
     const [selectedDate, setSelectedDate] = useState(null);
-
-    const randomName = faker.name.findName();
 
     return (
         <div>
