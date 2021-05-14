@@ -2,14 +2,13 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
-import Header from './components/header'
-import Footer from './components/footer'
+import Header from './header'
+import Footer from './footer'
 
-export default function mySchedule(){
+export default function MySchedule(){
 
     return (
         <div>
-        <Header />
             <main className="h-screen">
                 <section className="h-3/4">
                 <article className="inline-block w-3/5 h-full p-4 m-8 bg-gray-300 border-4 border-black">
