@@ -1,27 +1,20 @@
-import axios from "axios";
 
-const fetchData = async () => 
-await axios.get('https://jsonplaceholder.typicode.com/users')
-    .then(res => ({
-        error: false,
-        users: res.data,
-    }))
-    .catch(() => ({
-        error: true,
-        users: null,
-    }),
-);
-console.log(fetchData())
-const MySchedule = ({ users, error }) => {
-    console.log(users, "this is users")
+import Link from 'next/link'
+import React, { useState } from "react";
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
+import Header from './header'
+import Footer from './footer'
+
+export default function MySchedule(){
+
     return (
         <div>
             <main className="h-screen">
                 <section className="h-3/4">
                 <article className="inline-block w-3/5 h-full p-4 m-8 bg-gray-300 border-4 border-black">
                     <h2 className="text-2xl text-center">My Class</h2>
-                    {error && <div>There was an error fetching data.</div>}
-                    {!error && users && ( 
+                   
                         <table className="w-11/12 mx-auto my-8 bg-gray-400 border-2 border-black">
                             <thead>
                                 <tr>
@@ -32,13 +25,13 @@ const MySchedule = ({ users, error }) => {
                             </thead>
 
                             <tbody >
-                                    {users.map((user, key) => (
-                                    <tr key={key} className="text-center odd:bg-gray-200">
+                                    
+                                    <tr className="text-center odd:bg-gray-200">
                                         <td className="pl-2 border border-black">{user.username}</td>
                                         <td className="pl-2 border border-black">{user.user}</td>
                                         <td className="pl-2 border border-black">Complete</td>
                                     </tr>
-                                    ))}
+                                 
                                 
                                     <tr className="text-center ">
                                         <td className="pl-2 border border-black">Hodor Jarlson</td>
@@ -54,7 +47,7 @@ const MySchedule = ({ users, error }) => {
                                 
                             </tbody>
                         </table>
-                    )} 
+                    
                 </article>
                 
                 <article className="inline-block w-4/12 h-full p-4 text-center bg-gray-300 border-4 border-black">
@@ -81,12 +74,6 @@ const MySchedule = ({ users, error }) => {
         </div>
     );
 }
-export async function getStaticProps(){
-    const data = await fetchData();
 
-    return {
-        props:data,
-    };
-}
 
-export default MySchedule;
+
