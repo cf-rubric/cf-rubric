@@ -6,7 +6,7 @@ import Header from './header'
 import Footer from './footer'
 
 export default function MySchedule(){
-
+    
     return (
         <div>
             <main className="h-screen">
