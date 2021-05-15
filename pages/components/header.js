@@ -20,6 +20,10 @@ export default function Header(props){
                     <button onClick={ () => props.changeView('mySchedule') }>
                         <div className="inline-block p-8 transition bg-black hover:bg-gray-700">My Schedule</div>
                     </button>
+
+                    <button onClick={ () => props.changeView('rubric') }>
+                        <div className="inline-block p-8 transition bg-black hover:bg-gray-700">Grading Rubric</div>
+                    </button>
    
                 </nav>
             </div>

@@ -6,30 +6,30 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 
-export default function Schedule (){
+export default function Schedule (props){
     const [selectedDate, setSelectedDate] = useState(null);
     const [schedule, setSchedule] = useState("")
 
     const formHandler = (event) => {
         event.preventDefault();
-
+        props.changeView('mySchedule')
         // alert(event.target.student.value)
         // alert(event.target.date.value)
         // alert(event.target.whiteboard.value)
 
         const formData = new FormData(event.target)
-        const schedule = JSON.stringify(Object.fromEntries(formData))
         setSchedule(schedule)
     }
 
     return (
         <div>
             <h1 className="p-4 text-4xl text-center">Schedule Student</h1>
-            <form name="formData" onSubmit={formHandler} className="p-20 mb-5 border-4 border-gray-500 mx-96">
+            <form name="formData" onSubmit={(event) => {formHandler(event)}} className="p-20 mb-5 border-4 border-gray-500 mx-96">
 
-            <p>Student</p>
-            <input name="student" className="border-2 " />
-            
+            <p><strong>Student</strong></p>
+
+            {/* <input name="student" className="border-2 " /> */}
+            <p>Hodor</p>
             <br />
             <br />
             <p>Select Date and Time</p>
@@ -52,7 +52,7 @@ export default function Schedule (){
             </input>
             <br />
             <br />
-            <button className="px-20 py-3 m-2 transition bg-red-500 hover:bg-red-400">Submit</button>
+            <button className="px-20 py-3 m-2 transition bg-red-500 hover:bg-red-400" type='submit'>Submit</button>
             </form>
 
             <Footer/>

@@ -7,6 +7,7 @@ import Student from './student'
 import Schedule from './schedule'
 import MySchedule from './mySchedule'
 import Footer from './footer'
+import GradingRubric from './grading_rubric'
 
 export default function Index( ) {
     const [token, setToken] = useState();
@@ -44,7 +45,7 @@ export default function Index( ) {
                     </Head>
     
                     <Header changeView={ changeView } />
-                    <Student />
+                    <Student changeView={changeView}/>
                     <Footer />
                 </div>
             )
@@ -57,7 +58,7 @@ export default function Index( ) {
                     </Head>
     
                     <Header changeView={ changeView } />
-                    <Schedule />
+                    <Schedule changeView={ changeView }/>
                 </div>
             )
         } else if (view === 'mySchedule') {
@@ -69,9 +70,20 @@ export default function Index( ) {
                     </Head>
     
                     <Header changeView={ changeView } />
-                    <MySchedule />
+                    <MySchedule changeView={ changeView } />
                 </div>
             )
-        }
+        } else if (view === 'rubric') {
+            return (
+                <div className="">
+                    <Head>
+                        <title>Code Fellows Rubric</title>
+                        <link rel="icon" href="/favicon.ico" />
+                    </Head>
+    
+                    <Header changeView={ changeView } />
+                    <GradingRubric changeView= { changeView} />
+                </div>
+            )}
     }
 }

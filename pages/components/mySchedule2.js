@@ -1,11 +1,10 @@
-
 import Link from 'next/link'
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import Header from './header'
 import Footer from './footer'
 
-export default function MySchedule(props){
+export default function MySchedule(){
     const user = {
         username: 'hodor',
         user: 'rudy',
@@ -32,7 +31,7 @@ export default function MySchedule(props){
                                     <tr className="text-center odd:bg-gray-200">
                                         <td className="pl-2 border border-black">{user.username}</td>
                                         <td className="pl-2 border border-black">{user.user}</td>
-                                        <td className="pl-2 border border-black">05/15/2021 02:30 PM</td>
+                                        <td className="pl-2 border border-black">Complete/PASS</td>
                                     </tr>
                                  
                                 
@@ -68,10 +67,6 @@ export default function MySchedule(props){
                             <td className="pl-2 border border-black">Benjie Longbeard</td>
                             <td className="pl-2 border border-black">05/14/2021 2:30 PM</td>
                         </tr>
-                        <tr className="text-center odd:bg-gray-200">
-                            <td className="pl-2 border border-black"><button>Hodor</button></td>
-                            <td className="pl-2 border border-black">05/15/2021 2:30 PM</td>
-                        </tr>
                     </tbody>
                     </table>
                 </article>
@@ -81,6 +76,3 @@ export default function MySchedule(props){
         </div>
     );
 }
-
-
-
