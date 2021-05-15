@@ -1,13 +1,15 @@
 
 import Link from 'next/link'
 import React, { useState } from "react";
-import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import Header from './header'
 import Footer from './footer'
 
 export default function MySchedule(){
-
+    const user = {
+        username: 'username',
+        user:'me'
+    }
     return (
         <div>
             <main className="h-screen">
