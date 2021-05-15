@@ -8,27 +8,28 @@ import Schedule from './schedule'
 import MySchedule from './mySchedule'
 import Footer from './footer'
 
-export default function Index() {
+export default function Index( ) {
     const [token, setToken] = useState();
 
     const [username, setUsername] = useState('');
 
     const [view, setView] = useState('');
 
-    async function loginHandler(values) {
-  
-      const fetchedToken = await getToken(values);
-      
-      setView('home');
-  
-      setToken(fetchedToken);
-  
-      setUsername(values.username);
-      
+        async function loginHandler(values) {
+    
+        const fetchedToken = await getToken(values);
+        
+        setView('home');
+    
+        setToken(fetchedToken);
+    
+        setUsername(values.username);
+        
     }
 
     async function changeView(page) {
-      setView(page);
+        
+        setView(page);
     }
 
     if (!token) {
